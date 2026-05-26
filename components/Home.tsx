@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import emailjs from "@emailjs/browser";
 
 type Lang = "ar" | "en";
 
@@ -373,35 +374,32 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      const res = await fetch(
-        "https://ijcwpjcfmibcteqwsgbf.supabase.co/functions/v1/send-email",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlqY3dwamNmbWliY3RlcXdzZ2JmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU4NjczNTcsImV4cCI6MjA5MTQ0MzM1N30.GcOz2ZFtwKw25D7v-U8Kpf66pMBHl7z4C-ejT2IUMjc`,
-          },
-          body: JSON.stringify({
-            name: formState.name,
-            contact: formState.contact,
-            msg: formState.msg,
-          }),
-        }
-      );
-      if (!res.ok) throw new Error("Failed");
-      setSent(true);
-      setFormState({ name: "", contact: "", msg: "" });
-      setTimeout(() => setSent(false), 4000);
-    } catch (err) {
-      console.log(err);
-      alert("Something went wrong");
-    } finally {
-      setLoading(false);
-    }
-  };
+  e.preventDefault();
+  setLoading(true);
+
+  try {
+    await emailjs.send(
+      "service_qz9ovrx",
+      "template_oyt7beg",
+      {
+        name: formState.name,
+        contact: formState.contact,
+        message: formState.msg,
+      },
+      "CLsz4OoKU_l6JmNKX"
+    );
+
+    setSent(true);
+    setFormState({ name: "", contact: "", msg: "" });
+
+    setTimeout(() => setSent(false), 4000);
+  } catch (err) {
+    console.log(err);
+    alert(isRtl ? "حدث خطأ أثناء الإرسال" : "Something went wrong");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const navItems = [
     { label: c.navHome, id: "hero" },
