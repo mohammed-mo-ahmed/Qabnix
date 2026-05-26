@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "qabnix-app"
+  },
+  "targets": {
+    "qabnix-app": {
+      "hosting": {
+        "qabnix": [
+          "qabnix"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
