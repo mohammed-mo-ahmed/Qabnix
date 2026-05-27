@@ -9,4 +9,10 @@ export const metadata = {
   icons: {
     icon: "/logo.png",
   },
+  
+  // هذه الطريقة تجعل Next.js يضع الكود في الـ <head> تلقائياً وبشكل صحيح
+  verification: {
+    google: "VXz5Kx6yYjQNzcyTJfdjosx30jtu3dx43MwPUnxcSls",
+  },
+
 };
