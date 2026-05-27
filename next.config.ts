@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // هذا سيجعل Next.js ينتج مجلد 'out'
-  images: {
-    unoptimized: true, // مهم جداً عند استخدام 'export' لتجنب مشاكل الصور
-  },
+  output: 'standalone', // يتيح لك استخدام الـ SSR والـ Dynamic Routes
 };
 
 module.exports = nextConfig;
