@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "qabnix",
     "public": "out",
     "ignore": [
       "firebase.json",
@@ -14,3 +15,4 @@
     ]
   }
 }
+
