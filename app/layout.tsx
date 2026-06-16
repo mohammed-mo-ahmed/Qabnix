@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   },
   description: "Professional web development agency — responsive design, e-commerce, WordPress, and fast secure hosting.",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo.webp",
+    apple: "/logo.webp",
   },
   verification: {
     google: "VXz5Kx6yYjQNzcyTJfdjosx30jtu3dx43MwPUnxcSls",

@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     siteName: "قابنيكس",
     locale: "ar_EG",
     type: "website",
-    images: [{ url: `${domain}/logo.png`, width: 1200, height: 630 }],
+    images: [{ url: `${domain}/logo.webp`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "قابنيكس | تطوير مواقع احترافية",
     description: "نبني مواقع ويب احترافية تساعد عملك على النمو في العالم الرقمي.",
-    images: [`${domain}/logo.png`],
+    images: [`${domain}/logo.webp`],
   },
 };
 
@@ -41,7 +41,7 @@ export default function ArPage() {
             "@type": "Organization",
             name: "قابنيكس",
             url: domain,
-            logo: `${domain}/logo.png`,
+            logo: `${domain}/logo.webp`,
             description: "وكالة تطوير مواقع ويب احترافية — تصميم متجاوب، تجارة إلكترونية، WordPress، واستضافة سريعة وآمنة.",
             contactPoint: {
               "@type": "ContactPoint",

@@ -503,7 +503,7 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
             }}
           >
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt="Qabnix Logo"
               style={{ width: 28, height: 28, objectFit: "contain" }}
             />
@@ -741,7 +741,7 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
             }}
           >
             <img
-              src="/iphon.png"
+              src="/iphon.webp"
               alt="Qabnix responsive web design showcase on iPhone mockup"
               className="hero-float-img"
               style={{
@@ -1296,7 +1296,7 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
                   }}
                 >
                   <img
-                    src="/logo.png"
+                    src="/logo.webp"
                     alt="Qabnix Logo"
                     style={{ width: 28, height: 28, objectFit: "contain" }}
                   />

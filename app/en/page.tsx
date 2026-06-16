@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     siteName: "Qabnix",
     locale: "en_US",
     type: "website",
-    images: [{ url: `${domain}/logo.png`, width: 1200, height: 630 }],
+    images: [{ url: `${domain}/logo.webp`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Qabnix | Professional Web Development Agency",
     description: "We build professional websites that help your business grow in the digital world.",
-    images: [`${domain}/logo.png`],
+    images: [`${domain}/logo.webp`],
   },
 };
 
@@ -41,7 +41,7 @@ export default function EnPage() {
             "@type": "Organization",
             name: "Qabnix",
             url: domain,
-            logo: `${domain}/logo.png`,
+            logo: `${domain}/logo.webp`,
             description: "Professional web development agency helping businesses thrive in the digital world.",
             contactPoint: {
               "@type": "ContactPoint",
