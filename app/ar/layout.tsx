@@ -1,11 +1,8 @@
+import { inter, cairo } from "@/lib/fonts";
+
 export default function ArLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl">
-      <head>
-        <link rel="alternate" hrefLang="ar" href="https://qabnix.vercel.app/ar" />
-        <link rel="alternate" hrefLang="en" href="https://qabnix.vercel.app/en" />
-        <link rel="alternate" hrefLang="x-default" href="https://qabnix.vercel.app/ar" />
-      </head>
+    <html lang="ar" dir="rtl" className={`${inter.variable} ${cairo.variable}`}>
       <body>{children}</body>
     </html>
   );

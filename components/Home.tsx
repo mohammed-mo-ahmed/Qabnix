@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import emailjs from "@emailjs/browser";
@@ -127,7 +128,7 @@ const t = {
         Startup Company — We carefully build our first projects
         <br />
         <br />
-        Explore Our Team's Work
+        Explore Our Team&apos;s Work
       </>
     ),
     wpDesc:
@@ -291,7 +292,7 @@ function HamburgerMenu({
 }
 
 export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
-  const [lang, setLang] = useState<Lang>(defaultLang);
+  const [lang] = useState<Lang>(defaultLang);
   const [menuOpen, setMenuOpen] = useState(false);
   const c = t[lang];
   const router = useRouter();
@@ -304,10 +305,9 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
     };
 
   useEffect(() => {
-    document.title = c.siteName;
     document.documentElement.dir = c.dir;
     document.documentElement.lang = lang;
-  }, [lang, c.siteName, c.dir]);
+  }, [lang, c.dir]);
 
   const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -742,7 +742,7 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
           >
             <img
               src="/iphon.png"
-              alt="hero mockup"
+              alt="Qabnix responsive web design showcase on iPhone mockup"
               className="hero-float-img"
               style={{
                 width: "90%",
