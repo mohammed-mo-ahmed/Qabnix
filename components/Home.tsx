@@ -60,6 +60,54 @@ const t = {
     ),
     wpDesc:
       "تطوير WordPress مخصص بالكامل مع نظام إدارة محتوى قوي وتكاملات سلسة لجميع أحجام الأعمال.",
+    faqLabel: "الأسئلة الشائعة",
+    faqTitle: "إجابات عن أسئلتكم",
+    navFaq: "الأسئلة الشائعة",
+    footerFaq: "الأسئلة الشائعة",
+    faq: [
+      {
+        q: "ما هي الخدمات التي تقدمها قابنيكس؟",
+        a: "نقدم تطوير مواقع حديثة، متاجر إلكترونية، لوحات تحكم مخصصة، تحسين أداء وتجربة المستخدم، وربط أنظمة مختلفة بأحدث التقنيات."
+      },
+      {
+        q: "كم من الوقت يستغرق تطوير موقع؟",
+        a: "المدة تعتمد على حجم المشروع. المواقع التعريفية قد تستغرق من 3 إلى 5 أيام، بينما المتاجر الإلكترونية والأنظمة المخصصة قد تستغرق من أسبوع إلى أسبوعين."
+      },
+      {
+        q: "هل تدعمون الأجهزة المحمولة؟",
+        a: "نعم، جميع المواقع التي نطورها متجاوبة بالكامل مع الهواتف والأجهزة اللوحية وأجهزة الكمبيوتر."
+      },
+      {
+        q: "ما هي التقنيات التي تستخدمونها؟",
+        a: "نعمل مع Next.js، React، TypeScript، Firebase، وغيرها من التقنيات الحديثة لضمان الأداء والأمان."
+      },
+      {
+        q: "هل تقدمون خدمات الصيانة؟",
+        a: "نعم، نوفر تحديثات دورية وصيانة وتحسينات مستمرة حسب احتياجات العميل."
+      },
+    ],
+    projects: [
+      {
+        name: "متجر إلكتروني — ShopFlow",
+        desc: "منصة تجارة إلكترونية متكاملة مع لوحة تحكم لإدارة المنتجات والمخزون والطلبات، مع نظام دفع متعدد البوابات وتصميم متجاوب يعمل على جميع الأجهزة."
+      },
+      {
+        name: "نظام إدارة مشاريع — TaskForge",
+        desc: "منصة لإدارة المهام والمشاريع تدعم الفرق المتعددة، مع نظام متابعة زمني وتقارير أداء ولوحات معلومات تفاعلية لعرض سير العمل."
+      },
+      {
+        name: "بوابة رعاية صحية — MediCare",
+        desc: "نظام حجز مواعيد طبية عبر الإنترنت مع قاعدة بيانات للمرضى، نظام تذكير تلقائي، وتكامل مع أنظمة العيادات المختلفة."
+      },
+      {
+        name: "منصة تعليمية — EduCloud",
+        desc: "منصة تعليم إلكتروني تفاعلية تدعم الفصول الافتراضية والفيديوهات التعليمية والاختبارات التفاعلية ونظام تتبع التقدم."
+      },
+      {
+        name: "موقع عقارات — RealEstate Pro",
+        desc: "منصة عقارية متكاملة لعرض وإدارة العقارات مع بحث متقدم، جولات افتراضية، ونظام حجز واستعلام فوري."
+      },
+    ],
     contactLabel: "اتصل بنا",
     contactTitle: "تواصل معنا",
     contactDesc:
@@ -133,6 +181,54 @@ const t = {
     ),
     wpDesc:
       "Full custom WordPress development with powerful CMS, plugin development and seamless integrations for businesses of all sizes.",
+    faqLabel: "FAQ",
+    faqTitle: "Answers to Your Questions",
+    navFaq: "FAQ",
+    footerFaq: "FAQ",
+    faq: [
+      {
+        q: "What services does Qabnix offer?",
+        a: "We offer modern website development, e-commerce stores, custom control panels, performance and user experience optimization, and integration of different systems using the latest technologies."
+      },
+      {
+        q: "How long does it take to develop a website?",
+        a: "The time depends on the project size. Informational websites may take three to five days, while e-commerce stores and custom systems may take one to two weeks."
+      },
+      {
+        q: "Do you support mobile devices?",
+        a: "Yes, all the websites we develop are fully responsive for phones, tablets, and computers."
+      },
+      {
+        q: "What technologies do you use?",
+        a: "We work with Next.js, React, TypeScript, Firebase, and other modern technologies to ensure performance and security."
+      },
+      {
+        q: "Do you offer maintenance services?",
+        a: "Yes, we provide regular updates, maintenance, and continuous improvements according to the client's needs."
+      },
+    ],
+    projects: [
+      {
+        name: "E-Commerce Store — ShopFlow",
+        desc: "A fully integrated e-commerce platform with a dashboard for managing products, inventory, and orders. Multi-gateway payment system and responsive design across all devices."
+      },
+      {
+        name: "Project Management — TaskForge",
+        desc: "A project and task management platform supporting multiple teams with time tracking, performance reports, and interactive dashboards to visualize workflow."
+      },
+      {
+        name: "Healthcare Portal — MediCare",
+        desc: "An online medical appointment booking system with a patient database, automated reminders, and seamless integration with clinic management systems."
+      },
+      {
+        name: "Learning Platform — EduCloud",
+        desc: "An interactive e-learning platform supporting virtual classrooms, educational videos, interactive quizzes, and a progress tracking system."
+      },
+      {
+        name: "Real Estate — RealEstate Pro",
+        desc: "A comprehensive real estate platform for listing and managing properties with advanced search, virtual tours, and an instant booking and inquiry system."
+      },
+    ],
     contactLabel: "Contact Us",
     contactTitle: "Get In Touch",
     contactDesc:
@@ -291,9 +387,10 @@ function HamburgerMenu({
   );
 }
 
-export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
+export default function Home({ defaultLang = "en" }: { defaultLang?: Lang }) {
   const [lang] = useState<Lang>(defaultLang);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const c = t[lang];
   const router = useRouter();
   const isRtl = lang === "ar";
@@ -406,6 +503,7 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
     { label: c.learnMore, id: "about" },
     { label: c.navServices, id: "services" },
     { label: c.navWork, id: "portfolio" },
+    { label: c.navFaq, id: "faq" },
     { label: c.navContact, id: "contact" },
   ];
 
@@ -1028,6 +1126,62 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
                 </div>
               ))}
             </div>
+
+            {/* ── PROJECTS ── */}
+            <div style={{ marginTop: 48 }}>
+              <h3 style={{ fontSize: "clamp(1rem, 2vw, 1.3rem)", fontWeight: 700, color: "#0f172a", textAlign: "center", marginBottom: 32 }}>
+                {isRtl ? "مشاريعنا" : "Our Projects"}
+              </h3>
+              <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+                {c.projects.map((project, i) => (
+                  <div key={i} style={{ background: "#fff", border: "1px solid #e8ecf0", borderRadius: 14, padding: "28px 24px", display: "flex", flexDirection: "column", gap: 10, transition: "transform .2s, box-shadow .2s" }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
+                  >
+                    <div style={{ width: 36, height: 36, borderRadius: 10, background: "#eff4ff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b6ef5" strokeWidth="2" strokeLinecap="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
+                    </div>
+                    <h4 style={{ fontSize: ".95rem", fontWeight: 700, color: "#0f172a", margin: 0 }}>{project.name}</h4>
+                    <p style={{ fontSize: ".8rem", color: "#64748b", lineHeight: 1.7, margin: 0 }}>{project.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section id="faq" style={{ padding: "80px 0", background: "#fff", scrollMarginTop: 56 }}>
+          <div style={{ maxWidth: 1140, margin: "0 auto", padding: "0 24px" }}>
+            <div style={{ textAlign: "center", marginBottom: 48 }}>
+              <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "#3b6ef5", marginBottom: ".75rem" }}>
+                {c.faqLabel}
+              </div>
+              <h2 style={{ fontSize: "clamp(1.3rem, 2.8vw, 1.9rem)", fontWeight: 700, letterSpacing: "-.02em", lineHeight: 1.3, color: "#0f172a", margin: 0 }}>
+                {c.faqTitle}
+              </h2>
+            </div>
+            <div style={{ maxWidth: 800, margin: "0 auto", display: "flex", flexDirection: "column", gap: 8 }}>
+              {c.faq.map((item, i) => (
+                <div key={i} style={{ border: "1px solid #e8ecf0", borderRadius: 14, overflow: "hidden" }}>
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, padding: "18px 24px", background: openFaq === i ? "#f8faff" : "#fff", border: "none", cursor: "pointer", textAlign: isRtl ? "right" : "left", fontFamily: "inherit", transition: "background .2s" }}
+                    onMouseEnter={(e) => { if (openFaq !== i) (e.currentTarget as HTMLButtonElement).style.background = "#f8faff"; }}
+                    onMouseLeave={(e) => { if (openFaq !== i) (e.currentTarget as HTMLButtonElement).style.background = "#fff"; }}
+                  >
+                    <span style={{ fontSize: ".95rem", fontWeight: 600, color: "#0f172a", lineHeight: 1.4, flex: 1 }}>{item.q}</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b6ef5" strokeWidth="2" strokeLinecap="round" style={{ transform: openFaq === i ? "rotate(45deg)" : "rotate(0)", transition: "transform .25s", flexShrink: 0 }}>
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                  </button>
+                  <div style={{ maxHeight: openFaq === i ? 300 : 0, overflow: "hidden", transition: "max-height .3s ease" }}>
+                    <div style={{ padding: "0 24px 18px", fontSize: ".88rem", color: "#64748b", lineHeight: 1.75 }}>{item.a}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -1345,6 +1499,7 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
                     { label: c.footerAbout, id: "about" },
                     { label: c.footerServices, id: "services" },
                     { label: c.footerPortfolio, id: "portfolio" },
+                    { label: c.footerFaq, id: "faq" },
                   ].map((item) => (
                     <li key={item.id}>
                       <button
@@ -1578,11 +1733,13 @@ export default function Home({ defaultLang = "ar" }: { defaultLang?: Lang }) {
           .nav-cta-btn { display: none !important; }
           .hamburger-btn { display: flex !important; }
           .tech-logos-grid { grid-template-columns: repeat(4, 1fr) !important; }
+          .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
 
         @media (max-width: 700px) {
           .services-grid-desktop { display: none !important; }
           .services-grid-mobile { display: grid !important; }
+          .projects-grid { grid-template-columns: 1fr !important; }
         }
 
         @media (max-width: 600px) {
