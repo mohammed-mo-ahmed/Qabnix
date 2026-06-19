@@ -6,7 +6,8 @@ export const metadata: Metadata = {
     default: "Qabnix",
     template: "%s | Qabnix",
   },
-  description: "Professional web development agency — responsive design, e-commerce, WordPress, and fast secure hosting.",
+  description:
+    "Professional web development agency — responsive design, e-commerce, WordPress, and fast secure hosting.",
   icons: {
     icon: "/logo.webp",
     apple: "/logo.webp",
@@ -20,6 +21,10 @@ export const viewport = {
   themeColor: "#050a1e",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return children;
 }
