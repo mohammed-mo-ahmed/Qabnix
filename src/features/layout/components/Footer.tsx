@@ -212,7 +212,7 @@ export function Footer({
               </li>
               <li>
                 <a
-                  href="tel:+201119819885"
+                  href="tel:+201110008687"
                   style={{
                     fontSize: ".8rem",
                     color: "rgba(255,255,255,0.4)",

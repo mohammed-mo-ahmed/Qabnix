@@ -6,7 +6,7 @@ export const ar = {
   navServices: "خدماتنا",
   navWork: "أعمالنا",
   navContact: "اتصل بنا",
-  navPhone: "📞 ‎+2 01119819885",
+  navPhone: "📞 ‎+20 1110008687",
   navCta: "تواصل معنا",
   langBtn: "EN",
   heroTitle: ["تطوير مواقع", "ويب احترافية"],

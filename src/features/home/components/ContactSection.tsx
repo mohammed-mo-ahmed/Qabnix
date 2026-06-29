@@ -170,7 +170,7 @@ export function ContactSection({
               }}
             >
               <a
-                href="https://wa.me/+201119819885"
+                href="https://wa.me/+201110008687"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -253,7 +253,7 @@ export function ContactSection({
                   <div style={{ fontSize: 11.5, color: "#94a3b8", marginBottom: 3, fontWeight: 500 }}>
                     {isRtl ? "اتصل بنا" : "Call Us"}
                   </div>
-                  <a href="tel:+201119819885" style={{ fontSize: 14, fontWeight: 700, color: "#0f172a" }}>
+                  <a href="tel:+201110008687" style={{ fontSize: 14, fontWeight: 700, color: "#0f172a" }}>
                     ‎+2 01119819885
                   </a>
                 </div>

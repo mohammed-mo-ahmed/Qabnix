@@ -6,7 +6,7 @@ export const en = {
   navServices: "Services",
   navWork: "Work",
   navContact: "Contact",
-  navPhone: "📞 +2 01119819885",
+  navPhone: "📞 +20 1110008687",
   navCta: "Contact Us",
   langBtn: "عربي",
   heroTitle: ["Professional", "Web Development"],

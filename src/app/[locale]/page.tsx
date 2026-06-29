@@ -82,7 +82,7 @@ const jsonLd: Record<Locale, object> = {
       "Professional web development agency helping businesses thrive in the digital world.",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+2-01119819885",
+      telephone: "+20-1110008687",
       contactType: "customer service",
     },
     sameAs: [
@@ -101,7 +101,7 @@ const jsonLd: Record<Locale, object> = {
       "وكالة تطوير مواقع ويب احترافية — تصميم متجاوب، تجارة إلكترونية، WordPress، واستضافة سريعة وآمنة.",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+2-01119819885",
+      telephone: "+20-1110008687",
       contactType: "customer service",
     },
     sameAs: [
