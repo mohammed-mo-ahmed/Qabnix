@@ -254,7 +254,7 @@ export function ContactSection({
                     {isRtl ? "اتصل بنا" : "Call Us"}
                   </div>
                   <a href="tel:+201110008687" style={{ fontSize: 14, fontWeight: 700, color: "#0f172a" }}>
-                    ‎+2 01119819885
+                    ‎+20 1110008687
                   </a>
                 </div>
               </div>

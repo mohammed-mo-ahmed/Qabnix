@@ -225,7 +225,7 @@ export function Footer({
                     ((e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.4)")
                   }
                 >
-                  ‎+2 01119819885
+                  ‎+20 1110008687
                 </a>
               </li>
             </ul>
