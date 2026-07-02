@@ -1,4 +1,5 @@
 "use client";
+import { trackEvent } from "@/lib/metaPixel";
 
 export function ContactSection({
   contactLabel,
@@ -12,6 +13,7 @@ export function ContactSection({
   contactEmailAddr,
   contactWhatsapp,
   isRtl,
+  locale,
   formState,
   loading,
   sent,
@@ -29,6 +31,7 @@ export function ContactSection({
   contactEmailAddr: string;
   contactWhatsapp: string;
   isRtl: boolean;
+  locale: string;
   formState: { name: string; contact: string; msg: string };
   loading: boolean;
   sent: boolean;
@@ -173,6 +176,7 @@ export function ContactSection({
                 href="https://wa.me/+201110008687"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("Contact", { content_name: "whatsapp", language: locale })}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -224,7 +228,11 @@ export function ContactSection({
                   <div style={{ fontSize: 11.5, color: "#94a3b8", marginBottom: 3, fontWeight: 500 }}>
                     {contactOrEmail}
                   </div>
-                  <a href={`mailto:${contactEmailAddr}`} style={{ fontSize: 14, fontWeight: 700, color: "#3b6ef5" }}>
+                  <a
+                    href={`mailto:${contactEmailAddr}`}
+                    onClick={() => trackEvent("Contact", { content_name: "email", language: locale })}
+                    style={{ fontSize: 14, fontWeight: 700, color: "#3b6ef5" }}
+                  >
                     {contactEmailAddr}
                   </a>
                 </div>
@@ -253,7 +261,11 @@ export function ContactSection({
                   <div style={{ fontSize: 11.5, color: "#94a3b8", marginBottom: 3, fontWeight: 500 }}>
                     {isRtl ? "اتصل بنا" : "Call Us"}
                   </div>
-                  <a href="tel:+201110008687" style={{ fontSize: 14, fontWeight: 700, color: "#0f172a" }}>
+                  <a
+                    href="tel:+201110008687"
+                    onClick={() => trackEvent("Contact", { content_name: "phone", language: locale })}
+                    style={{ fontSize: 14, fontWeight: 700, color: "#0f172a" }}
+                  >
                     ‎+20 1110008687
                   </a>
                 </div>

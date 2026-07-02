@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "@/i18n/useTranslation";
+import { trackEvent } from "@/lib/metaPixel";
 import type { Locale } from "@/i18n/config";
 import { useInfiniteTicker } from "@/features/projects/hooks/useInfiniteTicker";
 import { Navbar } from "@/features/layout/components/Navbar";
@@ -173,6 +174,7 @@ export function HomePage({ locale }: { locale: Locale }) {
 
       setSent(true);
       setFormState({ name: "", contact: "", msg: "" });
+      trackEvent("Lead", { language: locale });
       setTimeout(() => setSent(false), 4000);
     } catch {
       alert(isRtl ? "حدث خطأ أثناء الإرسال" : "Something went wrong");
@@ -342,6 +344,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           contactEmailAddr={c.contactEmailAddr}
           contactWhatsapp={c.contactWhatsapp}
           isRtl={isRtl}
+          locale={locale}
           formState={formState}
           loading={loading}
           sent={sent}
