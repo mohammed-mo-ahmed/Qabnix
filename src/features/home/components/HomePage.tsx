@@ -17,10 +17,11 @@ import { FaqSection } from "./FaqSection";
 import { ContactSection } from "./ContactSection";
 import { Footer } from "@/features/layout/components/Footer";
 
-function SocialIcons() {
+function SocialIcons({ locale }: { locale: string }) {
   const items = [
     {
       href: "https://www.instagram.com/qabnix",
+      contentName: "instagram",
       icon: (
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
           <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2" />
@@ -31,6 +32,7 @@ function SocialIcons() {
     },
     {
       href: "https://www.facebook.com/Qabnix",
+      contentName: "facebook",
       icon: (
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
           <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
@@ -39,6 +41,7 @@ function SocialIcons() {
     },
     {
       href: "https://www.linkedin.com/company/qabnix",
+      contentName: "linkedin",
       icon: (
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
           <path d="M6.94 6.5A1.94 1.94 0 1 1 7 2.62a1.94 1.94 0 0 1-.06 3.88zM4 8.5h4v13H4v-13zM10 8.5h3.8v1.8h.06c.53-1 1.82-2.06 3.74-2.06 4 0 4.74 2.64 4.74 6.08v7.18h-4v-6.37c0-1.52-.03-3.47-2.12-3.47s-2.45 1.65-2.45 3.36v6.48h-4v-13z" fill="currentColor" />
@@ -53,6 +56,7 @@ function SocialIcons() {
       href={item.href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackEvent("Contact", { content_name: item.contentName, language: locale })}
       style={{
         width: 30,
         height: 30,
@@ -174,7 +178,7 @@ export function HomePage({ locale }: { locale: Locale }) {
 
       setSent(true);
       setFormState({ name: "", contact: "", msg: "" });
-      trackEvent("Lead", { language: locale });
+      trackEvent("Lead", { content_name: "contact_form", language: locale });
       setTimeout(() => setSent(false), 4000);
     } catch {
       alert(isRtl ? "حدث خطأ أثناء الإرسال" : "Something went wrong");
@@ -368,7 +372,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               {c.siteName}
             </>
           )}
-          renderSocialIcons={() => <SocialIcons />}
+          renderSocialIcons={() => <SocialIcons locale={locale} />}
         />
       </div>
     </div>

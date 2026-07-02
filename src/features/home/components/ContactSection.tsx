@@ -176,7 +176,7 @@ export function ContactSection({
                 href="https://wa.me/+201110008687"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackEvent("Contact", { content_name: "whatsapp", language: locale })}
+                onClick={() => trackEvent("Lead", { content_name: "whatsapp", language: locale })}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -230,7 +230,7 @@ export function ContactSection({
                   </div>
                   <a
                     href={`mailto:${contactEmailAddr}`}
-                    onClick={() => trackEvent("Contact", { content_name: "email", language: locale })}
+                    onClick={() => trackEvent("Lead", { content_name: "email", language: locale })}
                     style={{ fontSize: 14, fontWeight: 700, color: "#3b6ef5" }}
                   >
                     {contactEmailAddr}
@@ -263,7 +263,7 @@ export function ContactSection({
                   </div>
                   <a
                     href="tel:+201110008687"
-                    onClick={() => trackEvent("Contact", { content_name: "phone", language: locale })}
+                    onClick={() => trackEvent("Lead", { content_name: "phone", language: locale })}
                     style={{ fontSize: 14, fontWeight: 700, color: "#0f172a" }}
                   >
                     ‎+20 1110008687
